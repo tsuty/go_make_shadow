@@ -60,5 +60,5 @@ func getPassword() []byte {
 func main() {
 	s := newShadow(os.Args[1:])
 	password := getPassword()
-	fmt.Print(s.make(password))
+	fmt.Println(s.make(password))
 }
