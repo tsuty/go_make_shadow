@@ -1,0 +1,19 @@
+language: go
+go:
+  - '1.10'
+branches:
+  only:
+    - master
+    - /\Av\d+\.\d+\.\d+\z/
+before_deploy:
+  - make package
+deploy:
+  provider: releases
+  api_key:
+    secure: sDdoBDnKjIC1C6Tobnf8Yqzzzo4uQdwXZx7dPVi+PrwBGoXMrOQXO00W0onJFhKoCwBwtzt3dMvqnCLp6v1EzaUlMS+1B8rCC6TXQuLdvnUbw40YtP6edNOu0V2r71nb7Uwp5qJ4yOE1pliptliFiRQj7QSltkSteeintgLVbeQKY1mjeQ5AzLoEjX28YuB+NaR1YD43uA9kfSqHmhoVnfYrwzO+u0nttKLeO9CQV5EEMp53MrmbJCldrmOE1y6EKLImN8HdH0dNMIrSjaTolw7AZGYhkBzOn37DDa2yhgu6AjFPOTHKzxAC6BDM1HPieZ940xhiwCEhzfO9eS3QFr4tQnntiolnOc3PDyZxWzIzaXCOFNf3A3tb7uVtJ1UnN22crOBP9q0CsUrHjGKx9SZqIn9sznf8sC6QYOioidQBTitSKe7swhsDcSPWxcVZAJYKztHmdylprKYj9U9/7pNK1BvVWhxUQUqk8iIhGfuN5+QamDPX337z3LIFj/neJHsGhEEihPNRZOeZaLKLW83it5d3xrpvMGNo93CRz0XENUFqH5ekkVEKeph5AW7gmaRx9mXWhAH0Fu0STFG9saLD8wwkXeihlEYmdXgOqFSjEOQq2KabEh6nMlGj1W+0naghToRMsO6Qnr4Tesa5Z3PraY7DUp98QUgAhLiew9k=
+  file_glob: true
+  file: package/*
+  skip_cleanup: true
+  on:
+    repo: tsuty/make-shadow
+    tags: true
