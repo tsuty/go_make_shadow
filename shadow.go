@@ -48,6 +48,7 @@ type shadow struct {
 	MD5              bool    `long:"md5" description:"MD5"`
 	SHA256           bool    `long:"sha256" description:"SHA-256"`
 	SHA512           bool    `long:"sha512" description:"SHA-512 (default)"`
+	OnlyEncrypt      bool    `long:"only-encrypt" description:"Only encrypt password"`
 	Help             bool    `long:"help" short:"h" description:"Show this help"`
 }
 
