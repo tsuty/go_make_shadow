@@ -16,7 +16,7 @@ clean:
 	rm -rf build package
 
 deps:
-	go get -t ./...
+	go mod download
 
 package:
 	$(MAKE) package-targz GOOS=linux GOARCH=amd64
@@ -24,9 +24,7 @@ package:
 	$(MAKE) package-targz GOOS=linux GOARCH=arm64
 	$(MAKE) package-targz GOOS=linux GOARCH=arm
 	$(MAKE) package-zip GOOS=darwin GOARCH=amd64
-	$(MAKE) package-zip GOOS=darwin GOARCH=386
 	$(MAKE) package-zip GOOS=windows GOARCH=amd64
-	$(MAKE) package-zip GOOS=windows GOARCH=386
 
 package-zip: build
 	mkdir -p package
