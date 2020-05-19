@@ -50,13 +50,13 @@ func getPassword() []byte {
 		if err != nil {
 			log.Fatal(err)
 		}
-		return pass
+		return bytes.TrimSpace(pass)
 	} else {
-		buf, err := ioutil.ReadAll(os.Stdin)
+		pass, err := ioutil.ReadAll(os.Stdin)
 		if err != nil {
 			log.Fatal(err)
 		}
-		return buf
+		return bytes.TrimSpace(pass)
 	}
 }
 
