@@ -11,7 +11,6 @@ import (
 	_ "github.com/GehirnInc/crypt/md5_crypt"
 	_ "github.com/GehirnInc/crypt/sha256_crypt"
 	_ "github.com/GehirnInc/crypt/sha512_crypt"
-
 	"github.com/rickb777/date"
 )
 
