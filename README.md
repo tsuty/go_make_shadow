@@ -1,6 +1,6 @@
-# make-shadow
+# make-shadow [![Build Status](https://travis-ci.com/tsuty/make-shadow.svg?branch=master)](https://travis-ci.com/tsuty/make-shadow)
 
-The tool of making `/etc/shadow` 
+The tool of making `/etc/shadow`
 
 ```
 Usage:
@@ -23,11 +23,11 @@ Execute `make-shadow` command. And then enter the password. it outputs fields to
 
 ```bash
 $ ./make-shadow tsuty
-Enter Password: 
+Enter Password:
 tusty:$6$XpfOLr2VPR5tlYBB$kLwFV6RTFn7vXaPrr3YrTNY/iiQDmOYCuK4gNrAawljLTNQOR2m549niokSnHoTbSA6ZZZFNa8DlaevwkXe7v1:17862::::::
 
 $ ./make-shadow --only-encrypt
-Enter Password: 
+Enter Password:
 $6$hunZRG/CqxZJU0wm$KJP1KYP0No5m3NPRn8zgKdQM1td8qe.lCmgN1HoUzBWQExpIxygJguRNQswjfxGW6UVs3PiyK4cbJnJspj/Jz0
 ```
 
