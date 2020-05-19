@@ -1,13 +1,15 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
-	"github.com/howeyc/gopass"
-	"github.com/jessevdk/go-flags"
-	"golang.org/x/crypto/ssh/terminal"
 	"io/ioutil"
 	"log"
 	"os"
+
+	"github.com/howeyc/gopass"
+	"github.com/jessevdk/go-flags"
+	"golang.org/x/crypto/ssh/terminal"
 )
 
 func newShadow(args []string) *shadow {
